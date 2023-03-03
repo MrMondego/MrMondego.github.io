@@ -1,0 +1,46 @@
+h2 {
+    text-align: center;
+}
+.time {
+    margin: 20px;
+}
+
+#stock {
+    border-collapse: collapse;
+    margin: 20px;
+}
+#stock td, #stock th {
+    border: 1px solid black;
+    padding: 5px;
+}
+.tdCenter {
+    text-align: center;
+}
+#stock .up {
+    color: limegreen;
+}
+#stock .down {
+    color: red;
+}
+
+.chessboard {
+    border-collapse: collapse;
+}
+.chessboard td.brown, .pale {
+    width: 64px;
+    height: 64px;
+}
+.chessboard .notations {
+    text-align: center;
+    padding: 5px;
+    color: rgb(153,107,22);
+    font-size: 20px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.chessboard .pale {
+    background-color: rgb(251, 226, 195);
+}
+.chessboard .brown {
+    background-color: rgb(209, 114, 6);
+}
