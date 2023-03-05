@@ -9,7 +9,7 @@ export default function Layout() {
             <img src={logo} height="80vmin" alt="logo" />
             <ul>
                 <li>
-                    <NavLink to='/'>Главная</NavLink>
+                    <NavLink to='/react_labs'>Главная</NavLink>
                 </li>
             </ul>
         </header>
