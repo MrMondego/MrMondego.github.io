@@ -3,9 +3,8 @@ import logo from '../../logo.svg';
 import '../../css/App.css';
 import { Link } from 'react-router-dom';
 
-function LabButton(props) {
-    console.log(props.path)
-    return(
+function LabButton(props) {  
+  return(
       <button><Link to={props.path}>{props.text}</Link></button>
     )
 }
@@ -17,7 +16,7 @@ export default function HomePage() {
           <p>
             Лабораторные по React.js, 1 курс 2 семестр
           </p>
-          <LabButton text="Лабораторная №1" path="/lab1" />
+          <LabButton text="Лабораторная №1" path="lab1" />
         </div>
     )
 }

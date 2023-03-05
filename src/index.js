@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
       <Routes>
-        <Route exact path="/react_labs" element={<Layout />}>
+        <Route path="/react_labs/*" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="lab1" element={<Lab1 />} />
           <Route path="*" element={<ErrorPage />} />
