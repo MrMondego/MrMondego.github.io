@@ -16,12 +16,12 @@ import Layout from './components/Layout';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-     <BrowserRouter>
+     <BrowserRouter basename='/react_labs'>
       {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
       <Routes>
-        <Route path="/react_labs/*" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="lab1" element={<Lab1 />} />
           <Route path="*" element={<ErrorPage />} />

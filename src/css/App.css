@@ -45,12 +45,12 @@
   text-decoration: none;
 }
 .App-header button:hover {
-  color: #61dafb;
+  /* color: #61dafb; */
   border-color: #61dafb;
   cursor: pointer;
 }
-.App-header button:hover a:hover {
-  color: rgb(20, 158, 202);
+button:hover a {
+  color: #61dafb;
 }
 
 .App-link {
