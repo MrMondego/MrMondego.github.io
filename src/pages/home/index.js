@@ -10,14 +10,15 @@ function LabButton(props) {
 }
 
 export default function HomePage() {
-    return(
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" style={{userSelect:'none'}} />
-          <p>
-            Лабораторные по React.js, 1 курс 2 семестр
-          </p>
-          <LabButton text="Лабораторная №1" path="lab1" />
-          <LabButton text="Лабораторная №2" path="lab2" />
-        </div>
-    )
+  document.title = "Главная";
+  return(
+    <div className="App-header">
+      <img src={logo} className="App-logo" alt="logo" style={{userSelect:'none'}} />
+      <p>
+        Лабораторные по React.js, 1 курс 2 семестр
+      </p>
+      <LabButton text="Лабораторная №1" path="lab1" />
+      <LabButton text="Лабораторная №2" path="lab2" />
+    </div>
+  )
 }

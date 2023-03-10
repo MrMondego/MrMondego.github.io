@@ -6,7 +6,7 @@ export default function Layout() {
     return(
         <>
         <header className='layout'>
-            <img src={logo} height="80vmin" alt="logo" />
+            <img src={logo} width="77vmax" alt="logo" />
             <ul>
                 <li>
                     <NavLink to='/'>Главная</NavLink>

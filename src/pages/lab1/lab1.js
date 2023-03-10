@@ -6,7 +6,8 @@ import Stock from './Stock'
 import Chess from './Chess';
 
 export default function Lab1() {
-    return (
+  document.title = "Лабораторная №1";
+  return (
     <main>
       <CurrentTime />
       <Stock />
