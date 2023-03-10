@@ -1,5 +1,5 @@
 export default function JobChoose(props) {
-    return(<select onChangeCapture={(e) => {props.update(e.target.value)}}>
+    return(<select onChange={(e) => {props.update(e.target.value)}}>
         <option value="">Выберите профессию</option>
         <option value="developer">Front-end разработчик</option>
         <option value="designer">Дизайнер</option>

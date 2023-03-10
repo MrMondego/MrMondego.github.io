@@ -7,7 +7,7 @@ export default function JobMenu() {
     function setChoose(value) {
         updateChosed(value);
     }
-    useEffect(() => { updateChosed(chosed); console.log(chosed) })
+    useEffect(() => { updateChosed(chosed) })
     return(<>
         <h1>Задание 2</h1>
         <div className="jobmenu">
