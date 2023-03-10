@@ -1,0 +1,8 @@
+h1 {
+    text-align: center;
+}
+
+.clock {
+    font-size: calc(10px + 2vmin);
+    margin-left: 20px;
+}

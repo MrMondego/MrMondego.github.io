@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function LabButton(props) {  
   return(
-      <button><Link to={props.path}>{props.text}</Link></button>
+      <Link to={props.path} className="lab-link-button">{props.text}</Link>
     )
 }
 
@@ -17,6 +17,7 @@ export default function HomePage() {
             Лабораторные по React.js, 1 курс 2 семестр
           </p>
           <LabButton text="Лабораторная №1" path="lab1" />
+          <LabButton text="Лабораторная №2" path="lab2" />
         </div>
     )
 }
