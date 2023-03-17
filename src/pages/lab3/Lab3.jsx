@@ -2,9 +2,9 @@ import { useState } from 'react'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import '../../css/lab3.css'
+import SortTable from './SortTable'
 
 function Operator(props) {
-    console.log("Operator", props)
     if(props.title.includes("Belarus"))
         return(<>
             <label htmlFor="operator">Выбрать оператора:</label>
@@ -55,10 +55,13 @@ function Operator(props) {
 export default function Lab3() {
     const [title, setTitle] = useState('');
     return(<>
+        <h1>Задание 1</h1>
         <label>Введите номер телефона:</label>
         <PhoneInput onChange={(ev)=>{
-                setTitle(document.getElementsByClassName("selected-flag")[0].attributes.getNamedItem("title").value);
+            setTitle(document.getElementsByClassName("selected-flag")[0].attributes.getNamedItem("title").value);
         }} />
         <Operator title={title} />
+        <h1>Задание 2</h1>
+        <SortTable />
     </>)
 }

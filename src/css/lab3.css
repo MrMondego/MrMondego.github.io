@@ -2,3 +2,19 @@ label {
     margin: 10px;
     display: block;
 }
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th {
+    border-bottom: 2px solid black;
+    text-align: left;
+}
+td {
+    border-bottom: 1px solid gray;
+}
+td, th {
+    width: 30%;
+    padding: 20px;
+    /* padding-bottom: 10px; */
+}
