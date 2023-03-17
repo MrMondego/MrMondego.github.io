@@ -14,6 +14,7 @@ import HomePage from './pages/home';
 import Layout from './components/Layout';
 import Lab1 from './pages/lab1/lab1.js';
 import Lab2 from './pages/lab2/Lab2';
+import Lab3 from './pages/lab3/Lab3';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
      <BrowserRouter basename='/react_labs'>
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<HomePage />} />
           <Route path="lab1" element={<Lab1 />} />
           <Route path="lab2" element={<Lab2 />} />
+          <Route path="lab3" element={<Lab3 />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
