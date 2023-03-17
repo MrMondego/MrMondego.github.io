@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-international-telephone-input": "^4.73.6-r01",
     "react-intl-tel-input-v2": "^1.0.8",
+    "react-phone-input-2": "^2.15.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

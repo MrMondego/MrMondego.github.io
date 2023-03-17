@@ -1,9 +1,11 @@
 // import "../../lib";
-import ReactIntlTelInput from 'react-intl-tel-input-v2';
-import 'intl-tel-input/build/css/intlTelInput.css';
+// import ReactIntlTelInput from 'react-intl-tel-input-v2';
+// import 'intl-tel-input/build/css/intlTelInput.css';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import { useState } from 'react';
 
-
+const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
 // const numberPatterns = [
 //     '+7 (NNN) NNN-NN-NN',  // Россия и Казахстан
 //     '+375 NN NNN-NN-NN',   // Беларусь
@@ -62,12 +64,19 @@ function Operator(props) {
     return(<label>Нет операторов для страны с таким номером</label>)
 }
 
-export default function PhoneInput() {
+export default function PhoneInp() {
     // console.log(.includes("China"));
     const [title, setTitle] = useState('');
     return(<div className="phone-input">
         <label>Ваш телефон</label>
-        <ReactIntlTelInput onChange={()=>{setTitle(document.getElementsByClassName("iti__selected-flag")[0].attributes.getNamedItem("title").value);}} />
-        <Operator title={title} />
+        {/* <ReactIntlTelInput onChange={
+            (ev)=>{
+                setTitle(document.getElementsByClassName("iti__selected-flag")[0].attributes.getNamedItem("title").value);
+                // ev.target.value.replace(phoneRegex, "($1) $2-$3")
+                console.log(ev.phone.replace(phoneRegex, "($1) $2-$3"))
+            }
+        } />
+        <Operator title={title} /> */}
+        <PhoneInput  />
     </div>)
 }
