@@ -1,6 +1,8 @@
 function ShowLinks(prof) {
     console.log(prof.prof)
     switch(prof.prof) {
+        default:
+            break;
         case "": break;
         case "developer":
             return(<>
