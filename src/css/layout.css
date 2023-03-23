@@ -1,6 +1,9 @@
 html {
     overflow-y: overlay;
 }
+header img {
+  height: 7vmin;
+}
 .layout {
     background-color: #282c34;
     display: flex;

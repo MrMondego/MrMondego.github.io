@@ -7,7 +7,7 @@ export default function Layout() {
     return(
         <>
         <header className='layout'>
-            <img src={logo} width="77vmax" alt="logo" />
+            <img src={logo} alt="logo" />
             <ul className='link-hover-center'>
                 <li>
                     <NavLink to='/' id="main-link">Главная</NavLink>

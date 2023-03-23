@@ -21,7 +21,7 @@ label {
     border-bottom: 1px solid gray;
 }
 .sort-table td, .sort-table th {
-    width: 30%;
+    width: 20%;
     padding: 20px;
     /* padding-bottom: 10px; */
 }
