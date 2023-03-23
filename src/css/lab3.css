@@ -2,18 +2,25 @@ label {
     margin: 10px;
     display: block;
 }
-table {
+.sort-table {
     border-collapse: collapse;
     margin: 0 auto;
 }
-th {
+.sort-table th {
     border-bottom: 2px solid black;
     text-align: left;
 }
-td {
+.sort-table th button {
+    font-weight: bold;
+    border: none;
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+    font-size: 16px;
+}
+.sort-table td {
     border-bottom: 1px solid gray;
 }
-td, th {
+.sort-table td, .sort-table th {
     width: 30%;
     padding: 20px;
     /* padding-bottom: 10px; */
