@@ -1,0 +1,13 @@
+.lab5-form {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.valid-input {
+    outline-color: rgb(23, 179, 44)
+}
+.invalid-input {
+    outline-color: rgb(179, 23, 36)
+}
