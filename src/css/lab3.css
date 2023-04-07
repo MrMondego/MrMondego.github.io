@@ -17,6 +17,12 @@ label {
     padding: 10px;
     font-size: 16px;
 }
+.sort-table th button:hover {
+    background-color: rgb(195, 195, 195);
+}
+.sort-table th button:active {
+    outline: 3px solid black;
+}
 .sort-table td {
     border-bottom: 1px solid gray;
 }

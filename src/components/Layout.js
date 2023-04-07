@@ -14,7 +14,9 @@ export default function Layout() {
                 </li>
             </ul>
         </header>
-        <Outlet />
+        <main>
+            <Outlet />
+        </main>
         </>
     )
 }

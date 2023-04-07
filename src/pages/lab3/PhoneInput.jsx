@@ -77,6 +77,6 @@ export default function PhoneInp() {
             }
         } />
         <Operator title={title} /> */}
-        <PhoneInput  />
+        <PhoneInput onlyCountries={['cu','cw','kz']} />
     </div>)
 }

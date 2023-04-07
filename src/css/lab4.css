@@ -1,0 +1,73 @@
+.calendar .head {
+    max-width: fit-content;
+    margin: auto;
+    padding-bottom: 8px;
+    background-color: rgb(211, 211, 211);
+}
+
+.calendar .head button,
+.calendar .head select {
+    margin: 0 4px;
+    font-size: 18px;
+}
+
+.calendar table {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: auto;
+}
+
+.calendar table thead {
+    background-color: rgb(211, 211, 211);
+}
+
+.calendar .calendar-button-month {
+    border: none;
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+}
+.calendar .calendar-button-month:hover {
+    background-color: rgb(171, 171, 171);
+    cursor: pointer;
+}
+
+.calendar th {
+    vertical-align: middle;
+    text-align: center;
+    height: 36px;
+}
+
+.calendar .day {
+    padding: 4px 8px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.calendar .day:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+.calendar .day.selected {
+    border: 2px solid dodgerblue;
+}
+
+.calendar .day.today {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.calendar .day.today:hover {
+    background-color: #0081ff;
+}
+
+.calendar .day.today.selected {
+    border: 2px solid lightgray;
+}
+
+.calendar .not-in-month {
+    color:rgb(171, 171, 171);
+}

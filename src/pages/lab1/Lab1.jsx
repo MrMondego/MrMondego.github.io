@@ -8,10 +8,10 @@ import Chess from './Chess';
 export default function Lab1() {
   document.title = "Лабораторная №1";
   return (
-    <main>
+    <>
       <CurrentTime />
       <Stock />
       <Chess />
-    </main>
+    </>
     )
 }

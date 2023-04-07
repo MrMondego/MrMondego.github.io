@@ -12,6 +12,10 @@ header img {
     align-items: center;
     height: 7vmin;
     padding: 10px;
+    position: fixed;
+    min-width: 100%;
+    top: 0;
+    left: 0;
   }
   .layout ul {
     color: white;
@@ -51,4 +55,8 @@ header img {
 .link-hover-center li a:hover:after,
 .link-hover-center li a:focus:after {
     width: 100%;
+}
+
+header~main {
+  margin-top: calc(7vmin);
 }

@@ -53,13 +53,14 @@ function Operator(props) {
 }
 
 export default function Lab3() {
+    document.title = "Лабораторная №3";
     const [title, setTitle] = useState('');
     return(<>
         <h1>Задание 1</h1>
         <label>Введите номер телефона:</label>
         <PhoneInput onChange={(ev)=>{
             setTitle(document.getElementsByClassName("selected-flag")[0].attributes.getNamedItem("title").value);
-        }} />
+        }} onlyCountries={['by','ua','ru','lt','lv','pl']} />
         <Operator title={title} />
         <h1>Задание 2</h1>
         <SortTable />
