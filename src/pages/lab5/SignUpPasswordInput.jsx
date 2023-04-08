@@ -39,10 +39,10 @@ export default function SignUpPasswordInput({ update }) {
         update.subm()
     }
     return(<>
-        <label>Пароль</label>
+        <label htmlFor="password">Пароль</label>
         <input type="password" name="pass" id="password" onChange={e => handlePasswordChange(e)} />
         <ProgressBar progress={progress} />
-        <label>Подтверждение пароля</label> 
+        <label htmlFor="password-confirmation">Подтверждение пароля</label> 
         <input type="password" name="pass" id="password-confirmation" onChange={e => handleOnChangeConfirmation(e)} onClick={e => handleOnChangeConfirmation(e)} />
     </>)
 }

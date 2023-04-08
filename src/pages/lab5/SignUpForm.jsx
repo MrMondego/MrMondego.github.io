@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import SignUpPasswordInput from "./SignUpPasswordInput"
 import "../../css/lab5.css"
@@ -31,7 +31,14 @@ function SignUpEmailInput({ update }) {
 export default function SignUpForm() {
     const [canSubmit, setCanSubmit] = useState(true);
     const [email, setEmail] = useState("");
-    const [filledInputs, setFilledInputs] = useState({ email: false, password: false });
+    const [filledInputs, setFilledInputs] = useState({
+        name: false,
+        lastName: false,
+        patronymic: false,
+        floor: false,
+        email: false,
+        password: false
+    });
 
     const updateEmail = (value) => {
         setEmail(value);
@@ -41,21 +48,28 @@ export default function SignUpForm() {
     }
     const updateFilledInputs = (key, val) => {
         setFilledInputs({...filledInputs, [key]: val});
-        console.log(filledInputs)
     }
+    const updateInput = (e) => {
+        e.target.value ? updateFilledInputs(e.target.name, true) : updateFilledInputs(e.target.name, false)
+    }
+    useEffect(() => {
+        console.log(email);
+        updateSubmit()
+    })
     
     return(<form className="lab5-form">
-        <label>Электронная почта {email}</label>
+        <label htmlFor="lstname">Фамилия</label>
+        <input type="text" name="lastName" id="lstname" onChange={e => updateInput(e)} />
+        <label htmlFor="name">Имя</label>
+        <input type="text" name="name" id="name" onChange={e => updateInput(e)} />
+        <label htmlFor="patr">Отчество</label>
+        <input type="text" name="patronymic" id="patr" onChange={e => updateInput(e)} />
+        <label htmlFor="floor">Пол</label>
+        <input type="radio" name="floor" value={0} onClick={(e) => updateFilledInputs("floor", e.target.checked)} />
+        <input type="radio" name="floor" value={1} onClick={(e) => updateFilledInputs("floor", e.target.checked)} />
+        <label htmlFor="email">Электронная почта</label>
         <SignUpEmailInput update={ {email: updateEmail, subm: updateSubmit, inputs: updateFilledInputs} } />
         <SignUpPasswordInput update={ {subm: updateSubmit, inputs: updateFilledInputs} } />
-        <label>Фамилия</label>
-        <input type="text" name="lstname" id="lstname" />
-        <label>Имя</label>
-        <input type="text" name="name" id="name" />
-        <label>Отчество</label>
-        <input type="text" name="patr" id="patr" />
-
-        <br />
         <input type="submit" value="Сохранить" disabled={canSubmit} onClick={e => {e.preventDefault()}} />
     </form>)
 }

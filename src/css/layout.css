@@ -2,7 +2,7 @@ html {
     overflow-y: overlay;
 }
 header img {
-  height: 7vmin;
+  height: 100%;
 }
 .layout {
     background-color: #282c34;
@@ -10,7 +10,7 @@ header img {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 7vmin;
+    height: 60px;
     padding: 10px;
     position: fixed;
     min-width: 100%;
@@ -19,7 +19,7 @@ header img {
   }
   .layout ul {
     color: white;
-    font-size: calc(2px + 2vmin);
+    font-size: calc(20px - 0.2vmin);
     margin: 0;
     padding: 10px;
     list-style-type: none;
@@ -58,5 +58,5 @@ header img {
 }
 
 header~main {
-  margin-top: calc(7vmin);
+  margin-top: 60px;
 }
