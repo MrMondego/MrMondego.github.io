@@ -40,9 +40,9 @@ export default function Chess() {
             <h2>Задание 3</h2>
             <table className="chessboard">
                 <tbody>
-                    <tr><td></td>{lettersArr.map((letter) => <td className="notations">{letter}</td>)}<td></td></tr>
+                    <tr><td key="100"></td>{lettersArr.map((letter, i) => <td className="notations" key={i}>{letter}</td>)}<td key="10000"></td></tr>
                     {createDesk()}
-                    <tr><td></td>{lettersArr.map((letter) => <td className="notations">{letter}</td>)}<td></td></tr>
+                    <tr><td key="1000"></td>{lettersArr.map((letter, i) => <td className="notations" key={i+100}>{letter}</td>)}<td key="1000000"></td></tr>
                 </tbody>
             </table>
         </div>

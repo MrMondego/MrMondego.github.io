@@ -6,8 +6,9 @@
 }
 .lab6-student-info-handler-table {
     border-collapse: collapse;
+    margin: 20px;
 }
-.lab6-student-info-handler-table td {
+.lab6-student-info-handler-table td, .lab6-student-info-handler-table th {
     border: 1px solid black;
     padding: 15px;
     width: 100px;
