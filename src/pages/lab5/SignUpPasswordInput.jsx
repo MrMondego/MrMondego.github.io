@@ -25,7 +25,7 @@ export default function SignUpPasswordInput({ update }) {
         setProgress(score * 25);
     };
     const handleOnChangeConfirmation = (e) => {
-        if(e.target.value === password) {
+        if(e.target.value === password && password !== '') {
             e.target.className = "valid-input"
             update.inputs("password", true)
             
