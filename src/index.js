@@ -17,6 +17,7 @@ import Lab2 from './pages/lab2/Lab2';
 import Lab3 from './pages/lab3/Lab3';
 import Lab4 from './pages/lab4/Lab4';
 import Lab5 from './pages/lab5/Lab5';
+import Lab6 from './pages/lab6/Lab6';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
      <BrowserRouter basename='/react_labs'>
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="lab3" element={<Lab3 />} />
           <Route path="lab4" element={<Lab4 />} />
           <Route path="lab5" element={<Lab5 />} />
+          <Route path="lab6" element={<Lab6 />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

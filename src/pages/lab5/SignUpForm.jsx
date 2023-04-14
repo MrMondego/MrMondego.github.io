@@ -62,7 +62,7 @@ export default function SignUpForm() {
     
     const birthYears = [];
     for(let i = 1920; i <= 2023; i++) {
-        birthYears.push(<option value={i}>{i}</option>)
+        birthYears.push(<option key={i} value={i}>{i}</option>)
     }
     const birthDays = [];
     for(let i = 1; i <= 31; i++) {
@@ -92,18 +92,18 @@ export default function SignUpForm() {
         <span>
             <select onChange={handleOnChangeBirthYear}>{birthYears}</select>
             <select onChange={handleOnChangeBirthMonth}>
-                <option value="1">Январь</option>
-                <option value="2">Февраль</option>
-                <option value="3">Март</option>
-                <option value="4">Апрель</option>
-                <option value="5">Май</option>
-                <option value="6">Июнь</option>
-                <option value="7">Июль</option>
-                <option value="8">Август</option>
-                <option value="9">Сентябрь</option>
-                <option value="10">Октрябрь</option>
-                <option value="11">Ноябрь</option>
-                <option value="12">Декабрь</option>
+                <option key={1+100} value="1">Январь</option>
+                <option key={2+100} value="2">Февраль</option>
+                <option key={3+100} value="3">Март</option>
+                <option key={4+100} value="4">Апрель</option>
+                <option key={5+100} value="5">Май</option>
+                <option key={6+100} value="6">Июнь</option>
+                <option key={7+100} value="7">Июль</option>
+                <option key={8+100} value="8">Август</option>
+                <option key={9+100} value="9">Сентябрь</option>
+                <option key={10+100} value="10">Октрябрь</option>
+                <option key={11+100} value="11">Ноябрь</option>
+                <option key={12+100} value="12">Декабрь</option>
             </select>
             <select onChange={handleOnChangeBirthDay}>{birthDays.map((el, index) => (
                 <option key={index} value={el.props.value} disabled={((birthMonth % 2 === 0) && (el.props.value === 31)) || (birthMonth === '2' && el.props.value > 27) ? true : false}>{el.props.children}</option>
@@ -112,7 +112,7 @@ export default function SignUpForm() {
         <label htmlFor="email">Электронная почта</label>
         <SignUpEmailInput update={ {email: updateEmail, subm: updateSubmit, inputs: updateFilledInputs} } />
         <label htmlFor="phone">Номер телефона</label>
-        <PhoneInput inputProps={{id: "phone", required: "true"}} />
+        <PhoneInput inputProps={{id: "phone", required: true}} />
         <SignUpPasswordInput update={ {subm: updateSubmit, inputs: updateFilledInputs} } />
         <input type="submit" value="Сохранить" form="lab5-form" disabled={canSubmit} onClick={e => {e.preventDefault(); console.log({email, birthYear, birthMonth, birthDay})}} />
     </form>)
