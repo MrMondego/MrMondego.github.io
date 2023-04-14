@@ -25,7 +25,7 @@ function SignUpEmailInput({ update }) {
     }
     
     return(<>
-        <input type="email" name="email" id="email" onChange={e => handleOnChange(e)} />
+        <input type="email" name="email" id="email" form="lab5-form" onChange={e => handleOnChange(e)} />
     </>)
 }
 
@@ -38,7 +38,7 @@ export default function SignUpForm() {
         patronymic: false,
         floor: false,
         email: false,
-        password: false
+        password: false,
     });
     const [birthYear, setBirthYear] = useState(1920);
     const [birthMonth, setBirthMonth] = useState(1);
@@ -57,7 +57,6 @@ export default function SignUpForm() {
         e.target.value ? updateFilledInputs(e.target.name, true) : updateFilledInputs(e.target.name, false)
     }
     useEffect(() => {
-        console.log(email);
         updateSubmit()
     })
     
@@ -79,16 +78,16 @@ export default function SignUpForm() {
         setBirthDay(e.target.value);
     }
 
-    return(<form className="lab5-form">
+    return(<form id="lab5-form">
         <label htmlFor="lstname">Фамилия</label>
-        <input type="text" name="lastName" id="lstname" onChange={e => updateInput(e)} />
+        <input type="text" name="lastName" id="lstname" form="lab5-form" onChange={e => updateInput(e)} />
         <label htmlFor="name">Имя</label>
-        <input type="text" name="name" id="name" onChange={e => updateInput(e)} />
+        <input type="text" name="name" id="name" form="lab5-form" onChange={e => updateInput(e)} />
         <label htmlFor="patr">Отчество</label>
-        <input type="text" name="patronymic" id="patr" onChange={e => updateInput(e)} />
+        <input type="text" name="patronymic" id="patr" form="lab5-form" onChange={e => updateInput(e)} />
         <label htmlFor="floor">Пол</label>
-        <input type="radio" name="floor" value={0} onClick={(e) => updateFilledInputs("floor", e.target.checked)} />
-        <input type="radio" name="floor" value={1} onClick={(e) => updateFilledInputs("floor", e.target.checked)} />
+        <input type="radio" name="floor" form="lab5-form" value={0} onClick={(e) => updateFilledInputs("floor", e.target.checked)} />
+        <input type="radio" name="floor" form="lab5-form" value={1} onClick={(e) => updateFilledInputs("floor", e.target.checked)} />
         <label>Дата рождения</label>
         <span>
             <select onChange={handleOnChangeBirthYear}>{birthYears}</select>
@@ -113,8 +112,8 @@ export default function SignUpForm() {
         <label htmlFor="email">Электронная почта</label>
         <SignUpEmailInput update={ {email: updateEmail, subm: updateSubmit, inputs: updateFilledInputs} } />
         <label htmlFor="phone">Номер телефона</label>
-        <PhoneInput inputProps={{id: "phone"}} />
+        <PhoneInput inputProps={{id: "phone", required: "true"}} />
         <SignUpPasswordInput update={ {subm: updateSubmit, inputs: updateFilledInputs} } />
-        <input type="submit" value="Сохранить" disabled={canSubmit} onClick={e => {e.preventDefault()}} />
+        <input type="submit" value="Сохранить" form="lab5-form" disabled={canSubmit} onClick={e => {e.preventDefault(); console.log({email, birthYear, birthMonth, birthDay})}} />
     </form>)
 }

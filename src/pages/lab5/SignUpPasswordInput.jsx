@@ -43,7 +43,7 @@ export default function SignUpPasswordInput({ update }) {
         <input type="password" name="pass" id="password" onChange={e => handlePasswordChange(e)} />
         <ProgressBar progress={progress} />
         <label htmlFor="password-confirmation">Подтверждение пароля</label> 
-        <input type="password" name="pass" id="password-confirmation" onChange={e => handleOnChangeConfirmation(e)} onClick={e => handleOnChangeConfirmation(e)} />
+        <input type="password" name="pass" id="password-confirmation" form="lab5-form" onChange={e => handleOnChangeConfirmation(e)} onClick={e => handleOnChangeConfirmation(e)} />
     </>)
 }
 

@@ -1,4 +1,4 @@
-.lab5-form {
+#lab5-form {
     display: flex;
     flex-direction: column;
     max-width: fit-content;
@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 
-.lab5-form input[type="submit"] {
+#lab5-form input[type="submit"] {
     width: fit-content;
     margin-top: 15px;
 }
