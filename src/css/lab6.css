@@ -23,5 +23,5 @@
 }
 
 /* border-collapse */
-tr>*:not(:first-child) { border-top: 0; }
-tr:not(:first-child)>* { border-left:0; }
+.lab6-student-info-handler-table tr>*:not(:first-child) { border-top: 0; }
+.lab6-student-info-handler-table tr:not(:first-child)>* { border-left:0; }
