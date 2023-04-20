@@ -48,7 +48,7 @@ export default function SignUpPasswordInput({ update }) {
 }
 
 function ProgressBar({ progress }) {
-    return (
+  return (
       <div>
         <label>Password strength:</label>
         <progress value={progress} max="100" />

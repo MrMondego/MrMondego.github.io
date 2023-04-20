@@ -38,6 +38,7 @@ export default function SignUpForm() {
         patronymic: false,
         floor: false,
         email: false,
+        phone: false,
         password: false,
     });
     const [birthYear, setBirthYear] = useState(1920);
@@ -77,6 +78,13 @@ export default function SignUpForm() {
     const handleOnChangeBirthDay = (e) => {
         setBirthDay(e.target.value);
     }
+    const handleOnChangePhoneInput = e => {
+        const input = document.getElementById("phone")
+        if(input.value.length > 7)
+            updateFilledInputs("phone", true)
+        else
+            updateFilledInputs("phone",false)
+    }
 
     return(<form id="lab5-form">
         <label htmlFor="lstname">Фамилия</label>
@@ -112,7 +120,7 @@ export default function SignUpForm() {
         <label htmlFor="email">Электронная почта</label>
         <SignUpEmailInput update={ {email: updateEmail, subm: updateSubmit, inputs: updateFilledInputs} } />
         <label htmlFor="phone">Номер телефона</label>
-        <PhoneInput inputProps={{id: "phone", required: true}} />
+        <PhoneInput inputProps={{id: "phone", required: true, form: "lab5-form"}} onChange={handleOnChangePhoneInput} />
         <SignUpPasswordInput update={ {subm: updateSubmit, inputs: updateFilledInputs} } />
         <input type="submit" value="Сохранить" form="lab5-form" disabled={canSubmit} onClick={e => {e.preventDefault(); console.log({email, birthYear, birthMonth, birthDay})}} />
     </form>)

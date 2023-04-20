@@ -6,13 +6,17 @@ import "../../css/lab6.css"
 export default function StudentInfo(props) {
     const [studentInfo, setStudentInfo] = useState({
         "ФИО": "",
+        "Возраст": "Ожидание...",
+        "Факультет": "",
+        "Курс": "Ожидание...",
+        "Группа": "",
+        "Специальность":"",
+        "Электронная почта": "",
+        "Оператор услуг электронной почты": "Ожидание...",
+        "Номер телефона": "",
+        "Оператор мобильной связи": "Ожидание...",
         "Дата рождения": "",
         "Год поступления": "",
-        "Факультет": "",
-        "Группа": 0,
-        "Специализация":"",
-        "Почтовый адрес": "",
-        "Номер телефона": ""
     });
 
     const setField = (prop, value) => {
@@ -23,7 +27,6 @@ export default function StudentInfo(props) {
     }
 
     useEffect(() => {
-        console.log(studentInfo);
         props.dataCallback(studentInfo)
     })
 

@@ -5,11 +5,23 @@
     margin: 0 auto;
 }
 .lab6-student-info-handler-table {
+    display: block;
+    float: left;
     border-collapse: collapse;
-    margin: 20px;
+    max-width: 40vw;
+    margin: 30px 29%;
+}
+.lab6-student-info-handler-table tr {
+    display: block;
+    float: left;
 }
 .lab6-student-info-handler-table td, .lab6-student-info-handler-table th {
+    display: block;
     border: 1px solid black;
-    padding: 15px;
-    width: 100px;
+    /* padding: 15px; */
+    height: 3em;
 }
+
+/* border-collapse */
+tr>*:not(:first-child) { border-top: 0; }
+tr:not(:first-child)>* { border-left:0; }
