@@ -43,9 +43,9 @@ export default function StudentInfo(props) {
             <label>Группа</label>
             <input type="text" name="Группа" onChange={e => {setField(e.target.name, e.target.value)}} />
             <label>Специализация</label>
-            <input type="text" name="Специализация" onChange={e => {setField(e.target.name, e.target.value)}} />
+            <input type="text" name="Специальность" onChange={e => {setField(e.target.name, e.target.value)}} />
             <label>Адрес электронной почты</label>
-            <input type="text" name="Почтовый адрес" onChange={e => {setField(e.target.name, e.target.value)}} />
+            <input type="text" name="Электронная почта" onChange={e => {setField(e.target.name, e.target.value)}} />
             <label>Номер телефона</label>
             <input type="text" name="Номер телефона" onChange={e => {setField(e.target.name, e.target.value)}} />
         </div>
