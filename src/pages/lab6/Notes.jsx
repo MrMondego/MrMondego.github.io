@@ -24,19 +24,23 @@ export default function Notes() {
       setField(e.target.name, e.target.value);
    }
    const handleOnClickCreateNote = e => {
-      console.log(notesArr.length)
-      if(notesArr.length > 6)
-         setBackColor("rgb(215, 54, 48)")
-      else
-         setBackColor("rgb(215, 204, 48)")
+      // else
+      //    setBackColor("rgb(215, 204, 48)")
       setNotesArr(prevState => [...prevState, <div className="notes-container__note" style={{background: backColor}} key={notesArr.length}>
          {(notesArr.length > 6) && <h2>У вас слишком много заметок</h2>}
          <h2>{noteData.title}</h2>
          <h2>{noteData.date}</h2>
          <p>{noteData.text}</p>
       </div>])
-      console.log(notesArr.length)
    }
+   useEffect(() => {
+      if(notesArr.length > 6) {
+         setBackColor("rgb(215, 54, 48)")
+         console.log(notesArr.length)
+      } else {
+         setBackColor("rgb(215, 204, 48)")
+      }
+   })
    const handleSubmit = e => {
       e.preventDefault();
       e.target.reset();
