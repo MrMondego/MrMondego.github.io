@@ -24,7 +24,6 @@ export default function StudentInfoHandler(props) {
             data["Курс"] = course
             data["Возраст"] = age
             data["Оператор услуг электронной почты"] = data["Электронная почта"].split("@").pop()
-            console.log(data["Оператор услуг электронной почты"])
 
             const regex = /^\+?375(\s*(?=25|29|33|44)\d{2}\s*[-]?\s*\d{3}\s*[-]?\s*\d{2}\s*[-]?\s*\d{2})$/
             const match = data["Номер телефона"].match(regex);
@@ -65,7 +64,7 @@ export default function StudentInfoHandler(props) {
     //         externalWindow.close();
     //     }
     // }, [data])
-    return(<>
+    return(<div className="lab6-student-info-wrapper">
         <table className="lab6-student-info-handler-table">
             <tbody>
                 <tr>
@@ -76,5 +75,5 @@ export default function StudentInfoHandler(props) {
                 </tr>
             </tbody>
         </table>
-    </>)
+    </div>)
 }
