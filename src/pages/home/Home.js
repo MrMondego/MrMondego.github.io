@@ -23,6 +23,7 @@ export default function HomePage() {
       <LabButton text="Лабораторная №4" path="lab4" />
       <LabButton text="Лабораторная №5" path="lab5" />
       <LabButton text="Лабораторная №6" path="lab6" />
+      <LabButton text="Лабораторная №7" path="lab7" />
     </div>
   )
 }
