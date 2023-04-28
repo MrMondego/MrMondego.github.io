@@ -64,12 +64,12 @@ function Calendar({onChange = Function.prototype}) {
 //    const onChange = useMemo(() => Function.prototype, []);
 
    const [date, setDate] = useState(new Date());
-   const [currentDate, setCurrentDate] = useState(new Date());
+   const [currentDate] = useState(new Date());
    const [selectedDate, setSelectedDate] = useState(null);
 
    const year = date.getFullYear();
    const month = date.getMonth();
-   const day = date.getDate();
+//    const day = date.getDate();
 
    const yearSelect = useRef(null);
    const monthSelect = useRef(null);

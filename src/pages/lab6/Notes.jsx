@@ -48,8 +48,7 @@ export default function Notes({ initArr=[], defaultDate = undefined, handleNotes
 
    useEffect(() => {
       setNotesArr(initArr);
-      setField("date", defaultDate);
-   }, [initArr, defaultDate])
+   }, [initArr])
    
    useEffect(() => {
       setNoteData(noteData)
