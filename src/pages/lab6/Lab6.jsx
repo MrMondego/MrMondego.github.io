@@ -17,7 +17,7 @@ export default function Lab6() {
     
     useEffect(() => {
         document.title = "Лабораторная №6";
-    })
+    }, [])
 
     return(<>
         <h1>Задание 1</h1>

@@ -9,14 +9,13 @@ export default function StudentInfoHandler(props) {
     //     return document.createElement('div');
     // });
     const [data, setData] = useState(props.data);
-
-    const setField = (prop, value) => {
-        setData({
-            ...data,
-            [prop]: value
-        })
-    }
     useEffect(() => {
+        const setField = (prop, value) => {
+            setData({
+                ...data,
+                [prop]: value
+            })
+        }
         const interval = setTimeout(() => {
             const date = new Date();
             const course = data["Год поступления"] !== "" ? (date.getFullYear()-data["Год поступления"] > 4 ? "Окончил университет" : date.getFullYear()-data["Год поступления"]) : "Ожидание..."

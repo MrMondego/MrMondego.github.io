@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "../../css/lab6.css"
 
-export default function StudentInfo(props) {
+export default function StudentInfo({ dataCallback }) {
     const [studentInfo, setStudentInfo] = useState({
         "ФИО": "",
         "Возраст": "Ожидание...",
@@ -26,9 +26,7 @@ export default function StudentInfo(props) {
         })
     }
 
-    useEffect(() => {
-        props.dataCallback(studentInfo)
-    })
+    useEffect(() => dataCallback(studentInfo), [studentInfo, dataCallback])
 
     return(<>
         <div className="lab6-student-info">
