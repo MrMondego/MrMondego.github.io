@@ -34,7 +34,7 @@ function withScheduler(Component) {
             <Component onChange={handleDateChange} />
             {date && <Notes initArr={notesArr} handleNotes={updateNotesArr} defaultDate={formatDate(date)}>
                 {notesArr.length > 0 && <>
-                    {notesArr.map((el, i) => <>
+                    {notesArr.map((el, i) => <div style={{display: "flex", alignItems: "baseline"}}>
                         <button onClick={() => setNotesArr(notesArr.filter((item, index) => index !== i))}>Удалить запись {`${el.props.children[1].props.children} ${i+1}`}</button>
                         <button onClick={() => {
                             const newArr = [...notesArr];
@@ -46,7 +46,7 @@ function withScheduler(Component) {
                             </div>
                             setNotesArr(newArr);
                         }} >Изменить запись {`${el.props.children[1].props.children} ${i+1}`}</button>
-                    </>)}
+                    </div>)}
                 </>}
                 {notesArr.length > 1 && <button onClick={() => updateNotesArr([])}>Удалить все заметки</button>}
             </Notes>}

@@ -39,7 +39,12 @@
 }
 .create-note-container *:not(:last-child) {
     padding: 10px;
-    margin-bottom: 20px;
+    /* min-height: 60px; */
+    /* margin-bottom: 10px; */
+}
+.create-note-container button {
+    padding: 0 !important;
+    margin-right: 5px;
 }
 .notes-container {
     display: flex;
