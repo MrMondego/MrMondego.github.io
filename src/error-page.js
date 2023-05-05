@@ -1,4 +1,4 @@
-export default function ErrorPage() {
+export default function ErrorPage({ error }) {
   return (
     <div id="error-page">
       <h1>Oops!</h1>
