@@ -1,6 +1,8 @@
 .lab6-student-info-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+    padding: 0 20px;
 }
 .lab6-student-info {
     display: flex;
@@ -9,25 +11,23 @@
     margin: 0 auto;
 }
 .lab6-student-info-handler-table {
-    display: block;
-    float: left;
     border-collapse: collapse;
-    max-width: 40vw;
-    padding-top: 30px;
+    /* max-width: 40vw; */
+    padding: 0 30px;
 }
-.lab6-student-info-handler-table tr {
+/* .lab6-student-info-handler-table tr {
     display: block;
     float: left;
-}
+} */
 .lab6-student-info-handler-table td, .lab6-student-info-handler-table th {
-    display: block;
+    /* display: block; */
     border: 1px solid black;
-    /* padding: 15px; */
+    padding: 15px;
     height: 3em;
 }
 /* border-collapse */
-.lab6-student-info-handler-table tr>*:not(:first-child) { border-top: 0; }
-.lab6-student-info-handler-table tr:not(:first-child)>* { border-left:0; }
+/* .lab6-student-info-handler-table tr>*:not(:first-child) { border-top: 0; }
+.lab6-student-info-handler-table tr:not(:first-child)>* { border-left:0; } */
 .create-note-container {
     display: flex;
     flex-direction: column;

@@ -46,14 +46,14 @@ export default function Notes({ initArr=[], defaultDate = undefined, handleNotes
       handleNotes(notesArr);
    }, [notesArr, handleNotes])
 
-   useEffect(() => {
-      setNotesArr(initArr);
-   }, [initArr])
+   // useEffect(() => {
+   //    setNotesArr(initArr);
+   // }, [initArr])
    
-   useEffect(() => {
-      setNoteData(noteData)
-      // console.log(noteData)
-   }, [noteData])
+   // useEffect(() => {
+   //    setNoteData(noteData)
+   //    // console.log(noteData)
+   // }, [noteData])
 
    const handleSubmit = e => {
       e.preventDefault();

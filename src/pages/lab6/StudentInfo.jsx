@@ -26,7 +26,7 @@ export default function StudentInfo({ dataCallback }) {
         })
     }
 
-    useEffect(() => dataCallback(studentInfo), [studentInfo, dataCallback])
+    useEffect(() => dataCallback(studentInfo),  [dataCallback, studentInfo])
 
     return(<>
         <div className="lab6-student-info">

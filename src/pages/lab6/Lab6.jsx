@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useEffect, useState } from "react";
 import Notes from "./Notes";
 import StudentInfo from "./StudentInfo";
@@ -11,9 +12,9 @@ export default function Lab6() {
         setNotesArr(notes);
     }
 
-    const studentInfoHander = (data) => {
+    const studentInfoHander = useCallback((data) => {
         setData(data)
-    }
+    }, [])
     
     useEffect(() => {
         document.title = "Лабораторная №6";

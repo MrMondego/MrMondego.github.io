@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import ReactDOM from 'react-dom'
-import "../../css/lab6.css";
+// import "../../css/lab6.css";
 
 export default function StudentInfoHandler(props) {
     // const [container] = useState(() => {
@@ -66,12 +66,12 @@ export default function StudentInfoHandler(props) {
     return(<div className="lab6-student-info-wrapper">
         <table className="lab6-student-info-handler-table">
             <tbody>
-                <tr>
-                    {Object.keys(data).map((el,i) => i<10 && <th key={i} style={{border: "1px solid", padding: "15px"}}>{el}</th>)}
-                </tr>
-                <tr>
-                    {Object.values(data).map((el,i) => i<10 && <td key={i+100} style={{border: "1px solid", padding: "15px"}}>{el}</td>)}
-                </tr>
+                {Object.keys(data).map((el,i) =>
+                    <tr key={i}>
+                        <td key={i+100}>{el}</td>
+                        <td key={i+1000}>{data[el]}</td>
+                    </tr>
+                )}
             </tbody>
         </table>
     </div>)

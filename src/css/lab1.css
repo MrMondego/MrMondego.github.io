@@ -44,3 +44,10 @@ h2 {
 .chessboard .brown {
     background-color: rgb(209, 114, 6);
 }
+
+@media (max-width: 600px) {
+    .chessboard td.brown, .pale {
+        width: 30px;
+        height: auto;
+    }
+}
